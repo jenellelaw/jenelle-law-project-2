@@ -5,42 +5,82 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
+    integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous" />
+  <link rel="stylesheet" type="text/css" href="styles/styles.css">
   <title>Under The Sea | Get In Touch</title>
 </head>
 
 <body>
-  <header>
-    <nav class="main-nav">
+  <header class="contact secondary-header">
+    <nav class="main-nav wrapper-centered">
       <ul>
         <li><a href="index.html">Home</a></li>
-        <li><a href="about.html">About</a></li>
+        <li><a href="#">About</a></li>
         <li><a href="blog.html">Blog</a></li>
-        <li><a href="contact.html">Contact</a></li>
+        <li><a class="current-page" href="contact.html">Contact</a></li>
       </ul>
     </nav>
   </header>
 
-  <main>
-    <!-- GET IN TOUCH FORM STARTS -->
-    <form>
-      <h2>get in touch</h2>
-      <label for="name" class="visuallyHidden">Name</label>
-      <input type="text" placeholder="Name" id="name" name="name">
+  <main class="contact wrapper-centered">
+    <h2>get in touch</h2>
 
-      <label for="email" class="visuallyHidden">Email address</label>
-      <input type="email" placeholder="Email" id="email" name="email">
+    <div class="content">
+      <!-- CONTACT INFO STARTS -->
+      <section class="contact-info">
+        <ul class="social">
+          <li>
+            <a href="https://www.instagram.com" aria-label="Go to the Instagram page">
+              <i aria-hidden class="fab fa-instagram"></i>
+            </a>
+          </li>
+          <li>
+            <a href="https://www.facebook.com" aria-label="Go to the Facebook page">
+              <i aria-hidden class="fab fa-facebook-f"></i>
+            </a>
+          </li>
+          <li>
+            <a href="https://www.twitter.com" aria-label="Go to the Twitter page">
+              <i aria-hidden class="fab fa-twitter"></i>
+            </a>
+          </li>
+          <li>
+            <a href="https://www.whatsapp.com" aria-label="Contact via Whatsapp">
+              <i aria-hidden class="fab fa-whatsapp"></i>
+            </a>
+          </li>
+        </ul>
+        <a href="mailto:info@email.com">info@email.com</a>
+        <p>123-456-7890</p>
+        <p>123 Queen Street West, Unit 10,<span>Toronto Ontario</span> <span>M5V2D5</span></p>
+      </section> <!-- CONTACT INFO ENDS -->
 
-      <label for="comment" class="visuallyHidden">Email address</label>
-      <textarea id="comment" name="comment" label="comment" placeholder="comment"></textarea>
+      <!-- FORM-SECTION STARTS -->
+      <section class="form-section">
+        <div class="form-container">
+          <form class="contact-form">
+            <div class="input-container">
+              <label for="name" class="visuallyHidden">Name</label>
+              <input class="name" type="text" placeholder="Name" id="name" name="name">
 
-      <button>submit</button>
-    </form> <!-- GET IN TOUCH FORM ENDS -->
+              <label for="email" class="visuallyHidden">Email address</label>
+              <input class="email" type="email" placeholder="Email address" id="email" name="email">
+            </div>
+
+            <label for="message" class="visuallyHidden">Message</label>
+            <textarea id="message" name="message" placeholder="Message"></textarea>
+
+            <button class="click-here">submit</button>
+          </form>
+        </div>
+      </section> <!-- FORM-SECTION ENDS -->
+    </div>
   </main>
 
   <footer>
     <p>Copyright &copy; 2018 HackerYou</p>
   </footer>
-
 </body>
 
 </html>

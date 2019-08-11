@@ -1,33 +1,42 @@
+// most styles work at vw of 1600px;
+
 .index-header {
-  background: url("../../../assets/header-image.jpg");
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.5)), url('../../../assets/header-image.jpg');
   background-size: cover;
   background-repeat: none;
-  height: 80vh;
-  min-height: 700px;
+  background-position: center 80%;
+  height: 45vw;
+  min-height: 400px;
+  // position: relative;
 }
 
 .header-heading-wrapper {
-  margin-left: 10vw;
-  margin-top: 8%;
-  width: 90vw;
-  max-width: 2200px;
-  border: 1px solid red;
-  background: green;
+  // for max-width: 1600px
+  margin-left: 10%;
+  width: 90%;
+  margin-top: 7%;
+
+  position: relative; // posr for goldfish image
   display: flex;
-  justify-content: space-between;
 }
 
 .hero-img {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 60%;
   img {
     width: 100%;
-    display: block;
   }
 }
 
+// HOME-1 STARTS - What is under the sea?
+
 .home-1 {
   background: $navy;
-  padding: 10rem 0;
+  padding: 15% 0 12%;
   text-align: center;
+  max-height: 100vh;
 
   .centered-wrapper {
     @include flex-full(column, wrap, center, center);
@@ -37,64 +46,90 @@
     width: 88%;
     margin: 4rem auto;
     text-align: left;
-    
   }
 }
 
-.home-2{
+
+.home-2 {
   background: $spruce;
 
   .top,
   .bottom {
     display: flex;
-    flex-wrap: wrap;  
   }
-  
-  .top {
-    margin-bottom: 5%;
+
+  .bottom {
+    margin-top: -60px;
   }
 
   .half-image {
-    flex: 1 1 40%;
-  }
+    flex: 1 45%;
 
-  .text-content {
-    flex: 1 1 60%;
-    p {
-      margin: 2rem 0 2.5rem;
+    img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
     }
   }
 
-  img {
-    display: block;
-    object-fit: cover;
-    // width: 100%;
+  .text-content-container {
+    flex: 1 55%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .text-content {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      width: 50rem;
+    }
+
+    p {
+      margin: 2rem 0;
+    }
   }
 }
 
-.new-additions {
-  @include flex-full(column, wrap, center, flex-start);
-  padding: 5% 8% 0 20%;
-}
+.new-additions.half-image,
+  .nemo.half-image {
+    position: relative;
+    z-index: 1;
+    border-bottom: 45px solid rgba(0,0,0,0);
 
-.nemo {
-  @include flex-full(column, wrap, center, flex-end);
-  padding: 0 20% 5% 8%;
-  text-align: right;
-}
+    &::after {
+      content: '';
+      display: block;
+      width: 100%;
+      height: 100%;
+      background: $blue;
+      position: absolute;
+      top: 45px;
+      z-index: -1;
+    }
+  }
 
-.new-additions-image {
-  box-shadow: 40px 40px 0px 0px $blue;
-  position: relative;
-  top: -40px;
-  order: -1;
-}
+  .new-additions.half-image {
+    order: -1;
+    border-right: 45px solid rgba(0,0,0,0);
+    position: relative;
+    top: -45px;
+    
+    &::after {
+      left: 45px;
+    }
+  }
 
-.nemo-image {
-  box-shadow: -40px 40px 0px 0px $blue;
-  position: relative;
-  top: 30px;
-}
+  .nemo.half-image {
+    border-left: 45px solid rgba(0,0,0,0);
+    position: relative;
+    bottom: -80px;
+
+    &::after {
+      left: -45px;
+    }
+  }
 
 // SECTION 3
 
@@ -104,25 +139,29 @@
   .wrapper-centered {
     display: flex;
     flex-wrap: wrap;
-    padding: 10rem 0;
+    padding: 15rem 0 12rem;
+  }
+
+  h4 {
+    margin-bottom: 2rem;
   }
 }
 
 .icon-point {
-  flex: 1 1 50%;
+  flex: 1 1 48%;
   display: flex;
 
   i {
     color: $navy;
-    font-size: 3.5rem;
+    font-size: 2.75rem;
   }
 
-  // &:nth-child(odd) {
-  //   margin-right: 10px;
-  // }
+  &:nth-child(odd) {
+    margin-right: 4%;
+  }
 
   &:first-child {
-    margin-bottom: 50px;
+    margin-bottom: 5%;
   }
 }
 
@@ -131,8 +170,8 @@
   display: inline-block;
   padding: 1rem;
   border-radius: 50%;
-  width: 6rem;
-  height: 6rem;
+  width: 5rem;
+  height: 5rem;
   text-align: center;
   line-height: 0;
   @include flex-full(null, null, center, center);
@@ -141,7 +180,7 @@
 
 .icon-container {
   flex: 0 60px;
-  margin-right: 5%;
+  margin-right: 3%;
 }
 
 .icon-text {
@@ -149,56 +188,77 @@
 }
 
 .icon-point:first-of-type i {
-  font-size: 3.25rem;
+  font-size: 2.70rem;
   margin-top: 3px;
   margin-left: -5px;
 }
 
 .icon-point:nth-of-type(2) i {
-  font-size: 3.5rem;
+  font-size: 3rem;
 }
 
+// SECTION 4
+
 .home-4 {
-  height: 70vh;
+  height: 40vw;
   background: url("../../../assets/banner.jpg");
   background-position: center;
   background-size: cover;
   background-repeat: repeat;
 }
 
+// SECTION 5
+
 .home-5 {
   background: $navy;
   
   .wrapper-centered {
-    @include flex-full(row, nowrap, space-between, center);
-    padding: 5% 0 8%;
+    @include flex-full(row, wrap, null, center);
+    padding: 8rem 0;
   }
 
-  img {
-    box-shadow: 40px 40px 0px 0px $blue;
-    object-fit: cover;
-    flex: 0 1 383px;
-  }
-  
-  h3 {
-    margin-top: 5%;
+  .square-image {
+    position: relative;
+    z-index: 1;
+    border-bottom: 35px solid rgba(0,0,0,0);
+    border-right: 35px solid rgba(0,0,0,0);
+    flex: 1 30%;
+    margin-right: 5rem;
+
+    &::after {
+      content: '';
+      display: block;
+      width: 100%;
+      height: 100%;
+      background: $blue;
+      position: absolute;
+      top: 35px;
+      left: 35px;
+      z-index: -1;
+    }
+
+    img {
+      width: 100%;
+    }
   }
 
-  p {
-    margin: 3rem 0;
+  .month-profile {
+    flex: 1 70%;
+
+    p {
+      margin: 3rem 0 4rem;
+    }
   }
 }
 
-.month-profile {
-  flex: 0 1 60%;
-}
+// SECTION 6 - GALLERY
 
 .home-6 {
   background: $spruce;
 
   .gallery {
     display: flex;
-    padding: 5% 0;
+    padding: 8rem 0;
   }
 
   .gallery-image {
@@ -213,3 +273,104 @@
     }
   }
 }
+
+@media (min-width: 1601px) {
+  .header-heading-wrapper {
+
+  margin-left: calc((100vw - 1280px) / 2);
+  max-width: 1600px;
+}
+}
+
+@media (max-width: 1280px) {
+  .home-2 .bottom {
+    margin-top: 0;
+  }
+
+  .home-5 .square-image,
+  .home-5 .month-profile {
+    flex: 1 50%;
+  }
+} 
+
+@media (max-width: 1080px){
+  
+  .home-2 .text-content-container .text-content {
+    width: 100%;
+    padding: 4rem 6rem 8rem;
+  }
+
+  .nemo.half-image {
+    bottom: -40px;
+  }
+}
+
+/* Portrait tablet and small desktops */
+@media (max-width: 940px){
+  .home-3 .wrapper-centered {
+    padding: 10vw 0 8vw;
+  }
+
+  .icon-point {
+    flex-basis: 100%;
+    &:first-child {
+      margin-bottom: 4rem;
+    }
+    &:nth-child(2n + 1) {
+      margin-right: 0%;
+    }
+    margin-bottom: 4rem;
+  }
+
+  .icon-text {
+    margin-top: 0.85rem;
+  }
+
+  .home-5 {
+    .wrapper-centered {
+      flex-direction: column;
+    }
+
+    .square-image,
+    .month-profile {
+      flex: 0 100%;
+    }
+
+    .month-profile {
+      margin-top: 5rem;
+    }
+
+    h3 {
+      text-align: center;
+    }
+  }
+}
+
+/* Landscape phone to portrait tablet */
+@media (max-width: 768px){
+  .home-4 {
+    height: 50vw;
+  }
+
+  .home-6 .gallery {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .home-6 .gallery-image {
+    flex: 0 100%;
+    &:not(:last-child) {
+      margin-right: 0;
+      margin-bottom: 10%;
+    }
+  }
+}
+/* Landscape phones and down */
+@media (max-width: 480px){
+  .home-5 .wrapper-centered,
+  .home-6 .gallery {
+    padding: 10% 0;
+  }
+}
+/*Even smaller*/
+@media(max-width: 320px){}
