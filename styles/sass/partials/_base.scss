@@ -1,0 +1,73 @@
+.wrapper-centered {
+  @include wrapper(1280px, 80%, 0 auto);
+  border: 1px solid red;
+}
+
+.outer-wrapper {
+  @include wrapper(1800px, auto, 0 auto);
+}
+
+.main-nav {
+  margin: 2.5rem 0 0;
+  ul {
+    display: flex;
+    justify-content: flex-end;
+    li {
+      &:not(:last-child) {
+        margin-right: 4rem;
+      }
+      a {
+        @include barlow(2rem, 2.9rem);
+        letter-spacing: 0.1rem;
+        text-align: center;
+        text-decoration: none;
+      }
+    }
+  }
+}
+
+body {
+  @include lato(2rem, 3rem);
+}
+
+h1 {
+  @include barlow(13.8rem, 12.6rem);
+  width: 50rem;
+  border: 1px solid orange;
+  margin-top: -23px;
+}
+
+h2 {
+  @include barlow(8rem, 9rem);
+}
+
+h3 {
+  @include barlow(4.2rem, null);
+  letter-spacing: 1px;
+}
+
+h4 {
+  @include barlow(4.2rem, 4.2rem);
+}
+
+.click-here {
+  @include click-here($navy, 1rem 2.8rem);
+  @include barlow(2rem, auto);
+}
+
+.click-here.light {
+  background-color: $blue;
+  color: $navy;
+}
+
+img {
+  display: block;
+}
+
+footer {
+  background: $blue;
+  color: $navy;
+  padding: 0.5rem;
+  text-align: center;
+}
+

@@ -1,0 +1,215 @@
+.index-header {
+  background: url("../../../assets/header-image.jpg");
+  background-size: cover;
+  background-repeat: none;
+  height: 80vh;
+  min-height: 700px;
+}
+
+.header-heading-wrapper {
+  margin-left: 10vw;
+  margin-top: 8%;
+  width: 90vw;
+  max-width: 2200px;
+  border: 1px solid red;
+  background: green;
+  display: flex;
+  justify-content: space-between;
+}
+
+.hero-img {
+  img {
+    width: 100%;
+    display: block;
+  }
+}
+
+.home-1 {
+  background: $navy;
+  padding: 10rem 0;
+  text-align: center;
+
+  .centered-wrapper {
+    @include flex-full(column, wrap, center, center);
+  }
+
+  p {
+    width: 88%;
+    margin: 4rem auto;
+    text-align: left;
+    
+  }
+}
+
+.home-2{
+  background: $spruce;
+
+  .top,
+  .bottom {
+    display: flex;
+    flex-wrap: wrap;  
+  }
+  
+  .top {
+    margin-bottom: 5%;
+  }
+
+  .half-image {
+    flex: 1 1 40%;
+  }
+
+  .text-content {
+    flex: 1 1 60%;
+    p {
+      margin: 2rem 0 2.5rem;
+    }
+  }
+
+  img {
+    display: block;
+    object-fit: cover;
+    // width: 100%;
+  }
+}
+
+.new-additions {
+  @include flex-full(column, wrap, center, flex-start);
+  padding: 5% 8% 0 20%;
+}
+
+.nemo {
+  @include flex-full(column, wrap, center, flex-end);
+  padding: 0 20% 5% 8%;
+  text-align: right;
+}
+
+.new-additions-image {
+  box-shadow: 40px 40px 0px 0px $blue;
+  position: relative;
+  top: -40px;
+  order: -1;
+}
+
+.nemo-image {
+  box-shadow: -40px 40px 0px 0px $blue;
+  position: relative;
+  top: 30px;
+}
+
+// SECTION 3
+
+.home-3 {
+  background: $navy;
+
+  .wrapper-centered {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 10rem 0;
+  }
+}
+
+.icon-point {
+  flex: 1 1 50%;
+  display: flex;
+
+  i {
+    color: $navy;
+    font-size: 3.5rem;
+  }
+
+  // &:nth-child(odd) {
+  //   margin-right: 10px;
+  // }
+
+  &:first-child {
+    margin-bottom: 50px;
+  }
+}
+
+.icon {
+  background: $blue;
+  display: inline-block;
+  padding: 1rem;
+  border-radius: 50%;
+  width: 6rem;
+  height: 6rem;
+  text-align: center;
+  line-height: 0;
+  @include flex-full(null, null, center, center);
+  flex-basis: 1 50%;
+}
+
+.icon-container {
+  flex: 0 60px;
+  margin-right: 5%;
+}
+
+.icon-text {
+  flex: 1 80%;
+}
+
+.icon-point:first-of-type i {
+  font-size: 3.25rem;
+  margin-top: 3px;
+  margin-left: -5px;
+}
+
+.icon-point:nth-of-type(2) i {
+  font-size: 3.5rem;
+}
+
+.home-4 {
+  height: 70vh;
+  background: url("../../../assets/banner.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: repeat;
+}
+
+.home-5 {
+  background: $navy;
+  
+  .wrapper-centered {
+    @include flex-full(row, nowrap, space-between, center);
+    padding: 5% 0 8%;
+  }
+
+  img {
+    box-shadow: 40px 40px 0px 0px $blue;
+    object-fit: cover;
+    flex: 0 1 383px;
+  }
+  
+  h3 {
+    margin-top: 5%;
+  }
+
+  p {
+    margin: 3rem 0;
+  }
+}
+
+.month-profile {
+  flex: 0 1 60%;
+}
+
+.home-6 {
+  background: $spruce;
+
+  .gallery {
+    display: flex;
+    padding: 5% 0;
+  }
+
+  .gallery-image {
+    flex: 1 1 33.33%;
+
+    &:not(:last-child) {
+      margin-right: 3%;
+    }
+
+    img {
+      width: 100%;
+    }
+  }
+}

@@ -1,0 +1,54 @@
+$blue: #86e0f9;
+$spruce: #0f614e;
+$white: #fff;
+$navy: #0c1423;
+
+@mixin wrapper($max-width, $width, $margin) {
+  max-width: $max-width;
+  width: $width;
+  margin: $margin;
+  border: 1px solid red;
+}
+
+// Font mixins
+@mixin barlow ($size, $line-height) {
+  font-family: 'Barlow', sans-serif;
+  font-size: $size;
+  line-height: $line-height;
+  font-weight: bold;
+  color: $white;
+  text-transform: uppercase;
+}
+
+@mixin lato ($size, $line-height) {
+  font-family: 'Lato', sans-serif;
+  line-height: $line-height;
+  font-size: $size;
+  color: $white;
+}
+
+@mixin flex-center-all {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin flex-full ($direction, $wrap, $justify-content, $align-items) {
+  display: flex;
+  flex-direction: $direction;
+  flex-direction: $wrap;
+  justify-content: $justify-content;
+  align-items: $align-items;
+}
+
+@mixin click-here ($background-color, $padding) {
+  background-color: $background-color;
+  padding: $padding;
+  display: inline-block;
+  text-decoration: none;
+}
+
+@mixin anchor ($color) {
+  color: $color;
+  text-decoration: none;
+}
