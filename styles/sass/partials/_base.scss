@@ -56,11 +56,14 @@ h2 {
 
 h3 {
   @include barlow(4.2rem, 4.2rem);
-  letter-spacing: 1px;
 }
 
 h4 {
   @include barlow(3.2rem, 3.2rem);
+}
+
+h5 {
+  @include barlow(2.4rem, 2.4rem);
 }
 
 .click-here {
