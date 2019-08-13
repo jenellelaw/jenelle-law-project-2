@@ -1169,6 +1169,7 @@ h1 {
   top: -30px;
   width: 93%;
   position: absolute;
+  opacity: 1;
 }
 
 .aside-image img {
@@ -1178,11 +1179,18 @@ h1 {
   display: block;
 }
 
+.aside-text-item:first-child::before {
+  content: '';
+  display: block;
+  width: 100%;
+  height: calc(450px + 40px);
+}
+
 .aside-text {
   background: #0f614e;
   width: 80%;
   margin-left: auto;
-  padding: calc(280px + (490 - 280) * (100vw - 1080px) / (1750 - 1080)) 3rem 3rem;
+  padding: 0 3rem 3rem;
 }
 
 .aside-text-item:first-of-type {
@@ -1190,7 +1198,21 @@ h1 {
 }
 
 .aside-text-item h5 {
-  margin-bottom: 1rem;
+  margin-bottom: 20px;
+}
+
+.recent-posts-list {
+  list-style: disc inside;
+}
+
+.recent-posts-list li::marker {
+  padding-right: 10px;
+}
+
+@media (max-width: 1750px) {
+  .aside-text-item:first-child::before {
+    height: 27vw;
+  }
 }
 
 @media (max-width: 1390px) {
@@ -1213,23 +1235,38 @@ h1 {
     font-size: calc(3.6rem + (80 - 36) * (100vw - 320px) / (1280 - 320));
     line-height: 1;
   }
+  .blog aside {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 415px;
+            flex: 0 415px;
+    min-width: 415px;
+  }
+  .aside-text-item:first-child::before {
+    content: '';
+    display: block;
+    height: 330px;
+  }
 }
 
 @media (max-width: 1080px) {
-  .blog aside {
-    -webkit-box-flex: 0;
-        -ms-flex: 0 350px;
-            flex: 0 350px;
-    min-width: 350px;
+  .comments,
+  .blog-content,
+  .comments-form {
+    margin-right: 8%;
   }
-  .aside-text {
-    width: 85%;
-    padding-top: 280px;
+  .comment-content .author {
+    display: block;
   }
 }
 
 /* Portrait tablet and small desktops */
 @media (max-width: 940px) {
+  .blog main {
+    top: 0;
+  }
+  .blog .page-content {
+    top: -22vw;
+  }
   .blog.secondary-header {
     background-position: center bottom;
   }
@@ -1261,11 +1298,38 @@ h1 {
     top: 30px;
     left: -30px;
   }
-  .aside-text {
-    padding-top: 0;
+  .comment-content .author {
+    display: inline;
   }
   .aside-image {
-    position: relative;
+    opacity: 0.5;
+  }
+  .aside-text {
+    padding-top: 30px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .aside-text-item {
+    border: 1px solid red;
+  }
+  .aside-text-item:first-child::before {
+    display: none;
+  }
+  .aside-text-item:last-child {
+    -webkit-box-ordinal-group: 0;
+        -ms-flex-order: -1;
+            order: -1;
+    margin-left: 30vw;
+  }
+  .aside-image {
+    width: 50%;
     margin: 0;
   }
 }
