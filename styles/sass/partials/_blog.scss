@@ -1,10 +1,10 @@
 .blog.secondary-header {
-  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.5)), url('../../../assets/blog-header.jpg');
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.2)), url('../../../assets/blog-header.jpg');
   background-size: cover;
   background-repeat: none;
-  background-position: center 80%;
-  height: 30vw;
+  height: 40vw;
   min-height: 400px;
+  max-height: 1200px;
   position: relative;
   z-index: 0;
 }
@@ -17,7 +17,7 @@
 
 .blog.page-content {
   display: flex;
-  @include wrapper(1700px, null, 0 auto);
+  @include wrapper(1750px, null, 0 auto);
 
   h2 {
     margin-left: 45px;
@@ -28,7 +28,7 @@
 
 .blog main {
   position: relative;
-  top: -20vw;
+  top: -23vw;
   flex: 0 1 65%;
   max-width: 1000px;
 }
@@ -90,8 +90,7 @@
 }
 
 .comments-form {
-  border: 1px solid red;
-  padding: 5rem;
+  padding: 0 5rem 5rem;
   @include flex-full(column, wrap, center, center);
 
   .input-container {
@@ -138,7 +137,7 @@
 
 .blog aside {
   order: -1;
-  flex: 0 1 30%;
+  flex: 0 1 35%;
   margin-right: 5%;
   margin-top: 10rem;
   position: relative;
@@ -159,7 +158,7 @@
   background: $spruce;
   width: 80%;
   margin-left: auto;
-  padding: 37rem 3rem 3rem;
+  padding: calc(280px + (490 - 280) * (100vw - 1080px) / (1750 - 1080)) 3rem 3rem;
 }
 
 .aside-text-item {
@@ -180,32 +179,118 @@
 
     input {
       flex: 0 100%;
+      &:first-of-type {
+        margin-right: 0;
+      }
     }
   }
 }
 
-// .blog-image {
+@media (max-width: 1280px) {
+  h2 {
+    font-size: calc(3.6rem + (80 - 36) * (100vw - 320px) / (1280 - 320));
+    line-height: 1;
+  }
+}
 
-//   img {
-//     width: 100%;
-//   }
-//   position: relative;
-//   z-index: 1;
-//   border-bottom: 45px solid rgba(0,0,0,0);
+@media (max-width: 1080px) {
+  .blog aside {
+    flex: 0 350px;
+    min-width: 350px;
+  }
 
-//   &::after {
-//     content: '';
-//     display: block;
-//     width: 100%;
-//     height: 100%;
-//     background: $blue;
-//     position: absolute;
-//     top: 45px;
-//     z-index: -1;
-//   }
-// }
+  .aside-text {
+    width: 85%;
+    padding-top: 280px;
+  }
+}
 
-// .blog-content {
-//   margin-right: 10%;
-//   border: 1px solid red;
-// }
+/* Portrait tablet and small desktops */
+@media (max-width: 940px){
+  .blog.secondary-header {
+    background-position: center bottom;
+  }
+
+  .blog.page-content {
+    display: block;
+    border: 3px solid red;
+  }
+
+  .blog main,
+  .blog aside {
+    border: 1px solid blue;
+    top: -22vw;
+  }
+
+  .blog-content,
+  .comments,
+  .comments-form {
+    margin: 0 auto;
+  }
+
+  .blog-content,
+  .comments {
+    padding: 5rem;
+  }
+  
+  .blog-content {
+    border-left: none;
+  }
+
+  .blog-image {
+    border-width: 30px;
+    &::after {
+      top: 30px;
+      left: -30px;
+    }
+  }
+
+  .aside-text {
+    padding-top: 0;
+  }
+
+  .aside-image {
+    position: relative;
+    margin: 0;
+  }
+}
+/* Landscape phone to portrait tablet */
+@media (max-width: 600px) {
+  .blog.secondary-header {
+    min-height: 50vw;
+  }
+
+  .blog main {
+    top: -30vw;
+  }
+}
+
+@media (max-width: 570px) {
+  .comment-container {
+    flex-direction: column;
+    text-align: center;
+    .user-photo {
+      margin: 0 auto 2.5rem;
+    }
+  }
+}
+
+/* Landscape phones and down */
+@media (max-width: 480px){
+  .blog-image {
+    border-width: 20px;
+    &::after {
+      top: 20px;
+      left: -20px;
+    }
+  }
+
+  .blog-content {
+    .timestamp {
+      margin-bottom: 3rem;
+      .author {
+        display: block;
+      }
+    }
+  }
+}
