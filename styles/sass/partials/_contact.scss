@@ -2,11 +2,9 @@
   background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.5)), url('../../../assets/contact-header.jpg');
   background-size: cover;
   background-repeat: none;
-  background-position: center 80%;
+  background-position: center top;
   height: 30vw;
   min-height: 400px;
-  position: relative;
-  z-index: 0;
 }
 
 main.contact {
@@ -15,7 +13,6 @@ main.contact {
 
   h2 {
     margin: 0 0 2rem calc(300px + 5rem + 40px);
-    width: 100%;
     position: relative;
     z-index: 1;
   }
@@ -96,17 +93,16 @@ main.contact {
     background: none;
     color: $white;
     padding: 1.5rem;
-  }
-  
-  input, 
-  textarea,
-  button {
-    border: none;
+    border: 2px transparent solid;
+    &:focus {
+      border-color: $white;
+    }
   }
   
   input {
-    border-bottom: 1.5px $blue solid;
+    border-bottom: 2px $blue solid;
     flex: 1 50%;
+    margin-bottom: 4.5rem;
 
     &:first-of-type {
       margin-right: 3rem;
@@ -114,35 +110,33 @@ main.contact {
   }
 
   textarea {
-    border: 1.5px $blue solid;
+    border: 2px $blue solid;
     width: 100%;
     height: 30rem;
-    margin: 5rem 0 4rem; 
+    margin-bottom: 4rem; 
     resize: none;
   }
 
   button {
+    border: none;
     width: 100%;
   }
 }
 
 @media (max-width: 1350px) {
-
-  main.contact {
-    .content {
-      align-items: center;
-    }
-  }
-
   .contact-form {
     .input-container {
       flex-wrap: wrap;
     }
     input {
-      flex: 0 100%;
+      flex: 1 100%;
       &:first-of-type {
         margin-right: 0;
-        margin-bottom: 2rem;
+        margin-bottom: 0;
+      }
+
+      &:last-of-type {
+        margin: 3rem 0 4rem;
       }
     }
   }
@@ -156,10 +150,11 @@ main.contact {
   }
 
   main.contact {
-    margin-top: calc(-8rem + ((-80) - (-8)) * (100vw - 320px) / (1100 - 320));
+    margin-top: calc(-6rem + ((-30) - (-6)) * (100vw - 320px) / (1100 - 320));
 
     h2 {
-      margin: 0 0 8rem;
+      margin: 0;
+      width: 100%;
     }
 
     .content {
@@ -172,6 +167,57 @@ main.contact {
   }
 
   .contact-info {
-    margin-bottom: 10vw;
+    margin: 6vw 0;
+  }
+}
+
+@media (min-width: 1701px) {
+  main.contact {
+    margin-top: -400px;
+  }
+}
+
+@media (max-width: 940px) {
+  .form-container {
+    border-width: 30px;
+
+    &::after {
+      top: 30px;
+      left: -30px;
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  .contact-info {
+    margin: 10vw 0 8vw;
+  }
+
+  .form-container {
+    border-width: 20px;
+
+    &::after {
+      top: 20px;
+      left: -20px;
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  .form-container {
+    border: none;
+    &::after {
+      display: none;
+    }
+  }
+  
+  .contact-form {
+    padding: 2rem;
+  }
+}
+
+@media (max-width: 347px) {
+  .contact-form input {
+    max-width: 255px;
   }
 }

@@ -6,50 +6,11 @@ img {
   display: block;
 }
 
-.wrapper-centered {
-  @include wrapper(1280px, 80%, 0 auto);
+header {
+  max-height: 700px;
 }
 
-.outer-wrapper {
-  @include wrapper(1800px, auto, 0 auto);
-}
-
-.secondary-header {
-  height: 30vw;
-}
-
-
-.main-nav {
-  padding: 3.5rem 0 0;
-  ul {
-    display: flex;
-    justify-content: flex-end;
-    li {
-      &:not(:last-child) {
-        margin-right: 4rem;
-      }
-      a {
-        @include barlow(2rem, 2.9rem);
-        letter-spacing: 0.1rem;
-        text-align: center;
-        text-decoration: none;
-        border-bottom: 3px solid transparent;
-        transition: border 0.2s;
-        padding-bottom: 3px;
-
-        &:hover:not(.selected-page) {
-          border-color: $blue;
-        }
-      }
-
-      .selected-page {
-        color: $blue;
-      }
-    }
-  }
-}
-
-
+// TYPOGRAPHIC STYLES
 
 body {
   @include lato(2rem, 3rem);
@@ -68,24 +29,59 @@ h4 {
 }
 
 h5 {
-  @include barlow(2.4rem, 2.4rem);
+  @include barlow(2.4rem, 2.8rem);
 }
+
+// WRAPPER STYLES
+
+.wrapper-centered {
+  @include wrapper(1280px, 80%, 0 auto);
+}
+
+.outer-wrapper {
+  @include wrapper(1800px, auto, 0 auto);
+}
+
+.secondary-header {
+  height: 30vw;
+}
+
+// RECTANGULAR ANCHOR TAG STYLES
 
 .click-here {
   @include click-here($navy, 1rem 2.8rem);
   @include barlow(2rem, auto);
+  transition: all 0.2s;
+  transition-property: background color;
+  &:hover {
+    background: $blue;
+    color: $navy;
+  }
 }
 
 .click-here.light {
   background-color: $blue;
   color: $navy;
+  transition: all 0.2s;
+  transition-property: background color;
+
+  &:hover {
+    background: $spruce;
+    color: $navy;
+  }
 }
 
+i:hover {
+  color: $blue;
+}
+
+// FORM STYLES
 ::placeholder {
   color: $white;
   opacity: 1;
 }
 
+// FOOTER STYLES
 footer {
   background: $blue;
   color: $navy;
@@ -93,9 +89,182 @@ footer {
   text-align: center;
 }
 
+// NAV STYLES
+.main-nav {
+  padding: 3.5rem 0 0;
+}
+
+.nav-items {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.nav-item {
+  &:not(:last-child) {
+    margin-right: 4rem;
+  }
+
+  a {
+    @include barlow(2rem, 2.9rem);
+    letter-spacing: 0.1rem;
+    text-align: center;
+    text-decoration: none;
+    border-bottom: 3px solid transparent;
+    transition: border 0.2s;
+    padding-bottom: 3px;
+
+    &:hover:not(.selected-page) {
+      border-color: $blue;
+    }
+  }
+
+  .selected-page {
+    color: $blue;
+  }
+}
+
+// Hamburger Menu Icon
+  // credits to https://codepen.io/angeliquejw/pen/LvgNaB?editors=0100
+.nav-icon {
+  border: none;
+  color: transparent;
+  cursor: pointer;
+  display: block;
+  position: absolute;
+  z-index: 10000;
+  text-align: center;
+  text-indent: -9999px;
+  text-shadow: 0 0 0 gray;
+  top: 25px;
+  right: 25px;
+  transition: all 0.5s cubic-bezier(0.19, 1, 0.22, 1);
+  width: 30px;
+  height: 25px;
+}
+
+.icon-line {
+  background: #fff;
+  border-radius: 0.2rem;
+  display: block;
+  height: 0.3rem;
+  left: 0;
+  position: absolute;
+  text-indent: 0;
+  transition: all 0.6s cubic-bezier(0.5, 0.1, 0, 1.2);
+  width: 30px;
+}
+.icon-line:first-child {
+  height: 0.31rem;
+  top: 0;
+}
+.icon-line:nth-child(2) {
+  top: 10px;
+}
+.icon-line:nth-child(3) {
+  top: 20px;
+}
+
+// Hamburger Functionality
+  .menu-toggle {
+    display: none;
+    visibility: hidden;
+  }
+
+  .menu-toggle:checked ~ .main-nav {
+    left: 0;
+  }
+
+  .menu-toggle:checked ~ label .icon-line:first-child {
+    top: 0px;
+    transform: translateX(-8px) rotate(-45deg) translateY(12px);
+    width: 27px;
+  }
+
+  .menu-toggle:checked ~ label .icon-line:nth-child(2) {
+    opacity: 0;
+  }
+
+  .menu-toggle:checked ~ label .icon-line:nth-child(3) {
+    top: 14px;
+    transform: translateX(-5px) rotate(45deg) translateY(-8px);
+    width: 27px;
+  }
+
+// MEDIA QUERIES START HERE
+
+@media (max-width: 1280px) {
+  h1 {
+    font-size: calc(3.4rem + (138 - 32) * (100vw - 320px) / (1280 - 320));
+    line-height: calc(3.4rem + (126 - 32) * (100vw - 320px) / (1280 - 320));
+    width: 40%;
+  }
+
+  h2 {
+    font-size: calc(3.6rem + (80 - 36) * (100vw - 320px) / (1280 - 320));
+    line-height: 1;
+  }
+
+  h3 {
+    font-size: calc(2.6rem + (42 - 26) * (100vw - 320px) / (1280 - 320));
+    line-height: 1.2;
+  }
+
+  h4 {
+    font-size: calc(2.6rem + (32 - 26) * (100vw - 320px) / (1280 - 320));
+    line-height: 1.2;
+  }
+}
+
 @media (max-width: 768px) {
   .wrapper-centered {
     width: 85%;
   } 
+}
+
+@media (min-width: 481px) {
+  .nav-icon {
+    display: none;
+  }
+}
+
+@media (max-width: 480px) {
+  body {
+    font-size: 1.8rem;
+    line-height: 1.6;
+  }
+
+  .index-header {
+    .wrapper-centered {
+      width: 100vh;
+    }
+  }
+
+  .main-nav {
+    background: rgba(12, 20, 35, 0.95);
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    z-index: 5000;
+    left: -100vw;
+    transition: left 0.5s;
+  }
+
+  .nav-items {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 100%;
+    font-size: 3.2rem;
+  }
+
+  .nav-item:not(:last-child) {
+    margin-bottom: 1rem;
+  }
+
+  .nav-item:not(:last-child) {
+    margin-right: 0;
+  }
+
 }
 

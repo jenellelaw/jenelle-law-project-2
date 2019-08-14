@@ -9,12 +9,11 @@
 }
 
 .header-heading-wrapper {
-  // for max-width: 1600px
   margin-left: 10%;
   width: 90%;
   margin-top: 7%;
 
-  position: relative; // posr for goldfish image
+  position: relative; 
   display: flex;
 }
 
@@ -22,7 +21,7 @@ h1 {
   @include barlow(13.8rem, 12.6rem);
   width: 45rem;
   position: relative;
-  z-index: 10;
+  z-index: 5;
   margin: -21px 0 10%;
 }
 
@@ -92,7 +91,7 @@ h1 {
     }
 
     p {
-      margin: 2rem 0;
+      margin: 18px 0 25px;
     }
   }
 }
@@ -206,10 +205,11 @@ h1 {
 
 .home-4 {
   height: 40vw;
+  max-height: 700px;
   background: url("../../../assets/banner.jpg");
-  background-position: center;
+  background-position: center top;
   background-size: cover;
-  background-repeat: repeat;
+  background-repeat: no-repeat;
 }
 
 // SECTION 5
@@ -279,23 +279,41 @@ h1 {
   }
 }
 
-@media (min-width: 1601px) {
+@media (min-width: 1500px) {
+  h1 {
+    font-size: 15rem;
+    line-height: 1;
+  }
   .header-heading-wrapper {
     margin-left: calc((100vw - 1280px) / 2);
-    max-width: 1600px;
+    max-width: 1500px;
+    margin-top: 100px;
+  }
+
+  .home-1 {
+    padding: 280px 0 180px;
   }
 }
 
 @media (max-width: 1280px) {
   h1 {
-    font-size: calc(3.6rem + (138 - 36) * (100vw - 320px) / (1280 - 320));
-    line-height: calc(3.6rem + (126 - 36) * (100vw - 320px) / (1280 - 320));
+    font-size: calc(3.4rem + (138 - 32) * (100vw - 320px) / (1280 - 320));
+    line-height: calc(3.4rem + (126 - 32) * (100vw - 320px) / (1280 - 320));
     width: 40%;
   }
 
   h3 {
-    font-size: calc(3.2rem + (42 - 32) * (100vw - 320px) / (1280 - 320));
+    font-size: calc(2.6rem + (42 - 26) * (100vw - 320px) / (1280 - 320));
     line-height: 1.2;
+  }
+
+  h4 {
+    font-size: calc(2.6rem + (32 - 26) * (100vw - 320px) / (1280 - 320));
+    line-height: 1.2;
+  }
+
+  .home-1 p {
+    margin:20px auto 25px;
   }
 
   .home-2 .bottom {
@@ -470,17 +488,8 @@ h1 {
 
 /* Landscape phones and down */
 @media (max-width: 480px) {
-  body {
-    font-size: 1.8rem;
-    line-height: 1.6;
-  }
-
-  .home-1 {
-    padding-top: 23vw;
-  }
-
   .header-heading-wrapper {
-    margin: 7% 0 0;
+    margin: 0 0 0;
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
@@ -490,14 +499,19 @@ h1 {
   h1 {
     width: 100%;
     text-align: center;
-    margin: 0;
+    margin: 20% 0 0;
   }
-
+  
   .hero-img {
     position: relative;
     top: 40px;
     right: 0;
     width: 100%;
+    margin-top: -20px;
+  }
+  
+  .home-1 {
+    padding-top: 23vw;
   }
 
   .home-1 p {
@@ -557,18 +571,38 @@ h1 {
     margin: 0 auto 2rem;
   }
 
-  .home-5 .square-image {
-    border-width: 20px;
-    margin-right: 0;
+  .home-5 {
+    .square-image {
+      border-width: 20px;
+      margin-right: 0;
 
-    &::after {
-      top: 20px;
-      left: 20px;
+      &::after {
+        top: 20px;
+        left: 20px;
+      }
     }
+
+    .month-profile {
+      margin-top: 2.5rem;
+      p {
+        margin: 2rem 0 2.5rem;
+      }
+    }
+  } 
+
+  .home-2 .bottom .text-content {
+    margin-bottom: 15%;
   }
 
+  .home-3 .wrapper-centered,
   .home-5 .wrapper-centered,
   .home-6 .gallery {
-    padding: 10% 0;
+    padding: 15% 0;
   } 
+}
+
+@media (max-width: 320px) {
+  h1 {
+    margin-top: 24%;
+  }
 }

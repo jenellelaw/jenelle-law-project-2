@@ -13,14 +13,24 @@
 
 <body>
   <header class="contact secondary-header">
-    <nav class="main-nav wrapper-centered">
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="#">About</a></li>
-        <li><a href="blog.html">Blog</a></li>
-        <li><a class="selected-page" href="contact.html">Contact</a></li>
-      </ul>
-    </nav>
+    <div class=" wrapper-centered nav-bar">
+      <input id="toggle" class="menu-toggle" type="checkbox" aria-hidden="true">
+      <label for="toggle" class="nav-icon" aria-hidden="true">
+        Expand the menu
+        <span class="icon-line"></span>
+        <span class="icon-line"></span>
+        <span class="icon-line"></span>
+      </label>
+
+      <nav class="main-nav">
+        <ul class="nav-items">
+          <li class="nav-item"><a href="index.html">Home</a></li>
+          <li class="nav-item"><a href="#">About</a></li>
+          <li class="nav-item"><a href="blog.html">Blog</a></li>
+          <li class="nav-item"><a class="selected-page" href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
   </header>
 
   <main class="contact wrapper-centered">
