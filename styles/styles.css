@@ -381,7 +381,7 @@ footer {
   letter-spacing: 0.1rem;
   text-align: center;
   text-decoration: none;
-  border-bottom: 3px solid transparent;
+  border-bottom: 2.5px solid transparent;
   -webkit-transition: border 0.2s;
   transition: border 0.2s;
   padding-bottom: 3px;
@@ -1227,6 +1227,7 @@ h1 {
       -ms-flex: 0 1 70%;
           flex: 0 1 70%;
   max-width: 1000px;
+  margin-bottom: -18vw;
 }
 
 .blog-content {
@@ -1289,7 +1290,7 @@ h1 {
 }
 
 .comments-form {
-  padding: 0 5rem 5rem;
+  padding: 0 5rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1320,12 +1321,12 @@ h1 {
   background: none;
   color: #fff;
   padding: 1.5rem;
-  border: 2px transparent solid;
+  border: 2px #0c1423 solid;
 }
 
 .comments-form input:focus,
 .comments-form textarea:focus {
-  border-color: #0f614e;
+  border-color: #fff;
 }
 
 .comments-form input {
@@ -1336,7 +1337,7 @@ h1 {
 }
 
 .comments-form input:first-of-type {
-  margin-right: 3rem;
+  margin: 3rem 3rem 5rem 0;
 }
 
 .comments-form input:last-of-type {
@@ -1415,6 +1416,10 @@ h1 {
   padding-right: 10px;
 }
 
+.blog footer {
+  margin-top: -50px;
+}
+
 @media (min-width: 1701px) {
   .blog main {
     top: -400px;
@@ -1439,6 +1444,7 @@ h1 {
   }
   .comments-form input:first-of-type {
     margin-right: 0;
+    margin-bottom: 0;
   }
 }
 
@@ -1458,6 +1464,7 @@ h1 {
   }
   .blog main {
     top: 0;
+    margin-bottom: 12%;
   }
   .blog aside {
     margin-top: 8%;
@@ -1540,6 +1547,9 @@ h1 {
 }
 
 @media (max-width: 720px) {
+  .comments h4 {
+    text-align: center;
+  }
   .blog aside {
     margin: 3% 0 -23%;
   }
@@ -1593,11 +1603,20 @@ h1 {
     top: 20px;
     left: -20px;
   }
+  .blog-content {
+    padding: 3rem 2.5rem 4rem;
+  }
   .blog-content .timestamp {
     margin-bottom: 3rem;
   }
   .blog-content .timestamp .author {
     display: block;
+  }
+  .comments-form {
+    padding: 0 2.5rem;
+  }
+  .comments {
+    padding: 4rem 2.5rem 0;
   }
 }
 
@@ -1856,6 +1875,9 @@ main.contact .content {
 }
 
 @media (max-width: 600px) {
+  main.contact {
+    padding-bottom: 55px;
+  }
   .form-container {
     border: none;
   }
@@ -1863,12 +1885,12 @@ main.contact .content {
     display: none;
   }
   .contact-form {
-    padding: 2rem;
+    padding: 2.5rem 2rem;
   }
 }
 
-@media (max-width: 347px) {
+@media (max-width: 320px) {
   .contact-form input {
-    max-width: 255px;
+    max-width: 100%;
   }
 }

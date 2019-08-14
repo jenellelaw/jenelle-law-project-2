@@ -28,6 +28,7 @@
   top: -23vw;
   flex: 0 1 70%;
   max-width: 1000px;
+  margin-bottom: -18vw;
 }
 
 .blog-content {
@@ -87,7 +88,7 @@
 }
 
 .comments-form {
-  padding: 0 5rem 5rem;
+  padding: 0 5rem;
   @include flex-full(column, wrap, center, center);
 
   .input-container {
@@ -101,9 +102,9 @@
     background: none;
     color: $white;
     padding: 1.5rem;
-    border: 2px transparent solid;
+    border: 2px $navy solid;
     &:focus {
-      border-color: $spruce;
+      border-color: $white;
     }
   }
   
@@ -112,7 +113,7 @@
     flex: 1 50%;
 
     &:first-of-type {
-      margin-right: 3rem;
+      margin: 3rem 3rem 5rem 0;
     }
 
     &:last-of-type {
@@ -182,6 +183,12 @@
   }
 }
 
+.blog footer {
+  margin-top: -50px;
+}
+
+// MEDIA QUERIES START HERE
+
 @media (min-width: 1701px) {
   .blog main{
     top: -400px;
@@ -206,6 +213,7 @@
       flex: 0 100%;
       &:first-of-type {
         margin-right: 0;
+        margin-bottom: 0;
       }
     }
   }
@@ -228,6 +236,7 @@
 
   .blog main {
     top: 0;
+    margin-bottom: 12%;
   }
 
   .blog aside {
@@ -314,6 +323,10 @@
 
 @media (max-width: 720px) {
 
+  .comments h4 {
+    text-align: center;
+  }
+
   .blog aside {
     margin: 3% 0 -23%;
   }
@@ -366,11 +379,21 @@
   }
 
   .blog-content {
+    padding: 3rem 2.5rem 4rem;
+
     .timestamp {
       margin-bottom: 3rem;
       .author {
         display: block;
       }
     }
+  }
+
+  .comments-form {
+    padding: 0 2.5rem;
+  }
+
+  .comments {
+    padding: 4rem 2.5rem 0;
   }
 }

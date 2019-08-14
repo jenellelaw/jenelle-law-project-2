@@ -9,7 +9,6 @@ $navy: #0c1423;
   margin: $margin;
 }
 
-// Font mixins
 @mixin barlow ($size, $line-height) {
   font-family: 'Barlow', sans-serif;
   font-size: $size;

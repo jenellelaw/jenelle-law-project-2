@@ -123,6 +123,8 @@ main.contact {
   }
 }
 
+// MEDIA QUERIES START HERE
+
 @media (max-width: 1350px) {
   .contact-form {
     .input-container {
@@ -204,6 +206,11 @@ main.contact {
 }
 
 @media (max-width: 600px) {
+
+  main.contact {
+    padding-bottom: 55px;
+  }
+
   .form-container {
     border: none;
     &::after {
@@ -212,12 +219,12 @@ main.contact {
   }
   
   .contact-form {
-    padding: 2rem;
+    padding: 2.5rem 2rem;
   }
 }
 
-@media (max-width: 347px) {
+@media (max-width: 320px) {
   .contact-form input {
-    max-width: 255px;
+    max-width: 100%;
   }
 }
