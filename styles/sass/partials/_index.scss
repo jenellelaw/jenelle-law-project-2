@@ -1,7 +1,8 @@
 // HEADER STYLES
 
 .index-header {
-  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.5)), url('../../../assets/header-image.jpg');
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.5)),
+    url("../assets/header-image.jpg");
   background-size: cover;
   background-repeat: none;
   background-position: center 80%;
@@ -13,7 +14,7 @@
   width: 90%;
   margin-top: 7%;
 
-  position: relative; 
+  position: relative;
   display: flex;
 }
 
@@ -101,10 +102,10 @@ h1 {
 .nemo.half-image {
   position: relative;
   z-index: 1;
-  border-bottom: 45px solid rgba(0,0,0,0);
+  border-bottom: 45px solid rgba(0, 0, 0, 0);
 
   &::after {
-    content: '';
+    content: "";
     display: block;
     width: 100%;
     height: 100%;
@@ -117,17 +118,17 @@ h1 {
 
 .new-additions.half-image {
   order: -1;
-  border-right: 45px solid rgba(0,0,0,0);
+  border-right: 45px solid rgba(0, 0, 0, 0);
   position: relative;
   top: -45px;
-  
+
   &::after {
     left: 45px;
   }
 }
 
 .nemo.half-image {
-  border-left: 45px solid rgba(0,0,0,0);
+  border-left: 45px solid rgba(0, 0, 0, 0);
   position: relative;
   bottom: -70px;
 
@@ -193,7 +194,7 @@ h1 {
 }
 
 .icon-point:first-of-type i {
-  font-size: 2.70rem;
+  font-size: 2.7rem;
   margin-top: 3px;
   margin-left: -5px;
 }
@@ -207,7 +208,7 @@ h1 {
 .home-4 {
   height: 40vw;
   max-height: 700px;
-  background: url("../../../assets/banner.jpg");
+  background: url("../assets/banner.jpg");
   background-position: center top;
   background-size: cover;
   background-repeat: no-repeat;
@@ -217,7 +218,7 @@ h1 {
 
 .home-5 {
   background: $navy;
-  
+
   .wrapper-centered {
     @include flex-full(row, wrap, null, center);
     padding: 8rem 0;
@@ -226,13 +227,13 @@ h1 {
   .square-image {
     position: relative;
     z-index: 1;
-    border-bottom: 35px solid rgba(0,0,0,0);
-    border-right: 35px solid rgba(0,0,0,0);
+    border-bottom: 35px solid rgba(0, 0, 0, 0);
+    border-right: 35px solid rgba(0, 0, 0, 0);
     flex: 1 30%;
     margin-right: 5rem;
 
     &::after {
-      content: '';
+      content: "";
       display: block;
       width: 100%;
       height: 100%;
@@ -316,7 +317,7 @@ h1 {
   }
 
   .home-1 p {
-    margin:20px auto 25px;
+    margin: 20px auto 25px;
   }
 
   .home-2 .bottom {
@@ -327,13 +328,13 @@ h1 {
   .home-5 .month-profile {
     flex: 1 50%;
   }
-} 
+}
 
-@media (max-width: 1080px){
+@media (max-width: 1080px) {
   .index-header {
     height: auto;
   }
-  
+
   .home-2 .text-content-container .text-content {
     width: 100%;
     padding: 8% 5% 10%;
@@ -342,11 +343,10 @@ h1 {
   .nemo.half-image {
     bottom: -50px;
   }
-
 }
 
 /* Portrait tablet and small desktops */
-@media (max-width: 940px){
+@media (max-width: 940px) {
   h1 {
     margin-top: calc(-21px + 1vw);
   }
@@ -410,7 +410,7 @@ h1 {
         width: 85%;
         padding-left: 0;
         padding-right: 0;
-        margin: 0 auto;    
+        margin: 0 auto;
       }
     }
   }
@@ -460,7 +460,7 @@ h1 {
       left: -30px;
     }
   }
-  
+
   .home-4 {
     height: 50vw;
   }
@@ -504,7 +504,7 @@ h1 {
     text-align: center;
     margin: 20% 0 0;
   }
-  
+
   .hero-img {
     position: relative;
     top: 40px;
@@ -512,7 +512,7 @@ h1 {
     width: 100%;
     margin-top: -20px;
   }
-  
+
   .home-1 {
     padding-top: 23vw;
   }
@@ -535,7 +535,7 @@ h1 {
     order: -1;
     border-width: 20px;
     top: -20px;
-    
+
     &::after {
       left: 20px;
     }
@@ -551,7 +551,7 @@ h1 {
   .home-2 .text-content-container .text-content {
     padding: 0;
     margin: 10% 0;
-  } 
+  }
 
   .new-additions.text-content-container {
     .text-content {
@@ -562,7 +562,7 @@ h1 {
   .icon-point {
     display: block;
     text-align: center;
-    &:not(:last-child){
+    &:not(:last-child) {
       margin-bottom: 5rem;
     }
     &:last-child {
@@ -591,7 +591,7 @@ h1 {
         margin: 2rem 0 2.5rem;
       }
     }
-  } 
+  }
 
   .home-2 .bottom .text-content {
     margin-bottom: 15%;
@@ -601,7 +601,7 @@ h1 {
   .home-5 .wrapper-centered,
   .home-6 .gallery {
     padding: 15% 0;
-  } 
+  }
 }
 
 @media (max-width: 320px) {

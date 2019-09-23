@@ -1,168 +1,200 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" type="text/css" href="styles/styles.css" />
+    <title>Under The Sea | Blog</title>
+  </head>
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <link rel="stylesheet" type="text/css" href="styles/styles.css">
-  <title>Under The Sea | Blog</title>
-</head>
+  <body>
+    <header class="blog secondary-header">
+      <!-- hamburger menu // credits to https://codepen.io/angeliquejw/pen/LvgNaB?editors=0100 -->
+      <div class="wrapper-centered nav-bar">
+        <input
+          id="toggle"
+          class="menu-toggle"
+          type="checkbox"
+          aria-hidden="true"
+        />
+        <label for="toggle" class="nav-icon" aria-hidden="true">
+          Expand the menu
+          <span class="icon-line"></span>
+          <span class="icon-line"></span>
+          <span class="icon-line"></span>
+        </label>
 
-<body>
-  <header class="blog secondary-header">
-    <!-- hamburger menu // credits to https://codepen.io/angeliquejw/pen/LvgNaB?editors=0100 -->
-    <div class="wrapper-centered nav-bar">
-      <input id="toggle" class="menu-toggle" type="checkbox" aria-hidden="true">
-      <label for="toggle" class="nav-icon" aria-hidden="true">
-        Expand the menu
-        <span class="icon-line"></span>
-        <span class="icon-line"></span>
-        <span class="icon-line"></span>
-      </label>
-
-      <nav class="main-nav">
-        <ul class="nav-items">
-          <li class="nav-item"><a href="index.html">Home</a></li>
-          <li class="nav-item"><a href="#">About</a></li>
-          <li class="nav-item"><a class="selected-page" href="blog.html">Blog</a></li>
-          <li class="nav-item"><a href="contact.html">Contact</a></li>
-        </ul>
-      </nav>
-    </div>
-  </header>
-
-  <div class="blog page-content">
-    <main>
-      <!-- BLOG POSTS STARTS -->
-      <article>
-        <h2>Blog</h2>
-        <div class="blog-image">
-          <img src="assets/blog-post-image.jpg" alt="Aquarium tank containing clownfish and coral">
-        </div>
-        <div class="blog-content">
-          <h3>Discovering new species</h3>
-          <p class="timestamp">Monday May 4th, 2019 <span class="author">by Dieula</span></p>
-          <p>Curabitur lobortis id lorem id bibendum. Ut id consectetur magna. Quisque volupat augue enim, pulvinar
-            lobortis
-            nibh
-            lacinia at. Vestibulum nec erat ut mi sollicitudin porttitor id sit amet risus. Nam tempus vel odiocitae
-            aliquam.
-          </p>
-          <p>In imperdiet eros id lacus vestibulum vestibulum. Suspendisse fermentum sem sagittis ante venenatis egestas
-            quis
-            veljusto. Maecenas semper suspicit nunc, sed aliquam sapien convallis eu. Nulla ut turpis in diam dapibus
-            consequat.
-            Fusce vehicula dolor arcu, sit amet blandit dolor mollis nec. Donec vicerra eleifend lacu.</p>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut pretium pretium tempor. Ut eget imperdiet
-            neque.
-            In
-            volupat ante semper diam molestie, et aliquamerat laoreet. Sed sit amet arcu aliquet, molestie justo at,
-            auctor
-            nunc.
-            Phasellus ligula ipsum, volupat eget semper id, viverra eget nibh. Suspendisse luctus mattis cursus. Nam
-            consectetur
-            ante at nisl hendrerit gravida. Donec behicula rhoncus mattis. Mauris dignissim semper mattis. Fusce
-            porttitor
-            a
-            mi at
-            suspicit. Praesent facilisis dolor sapien, vel sodales augue mollis ut. Mauris venenatis magna eu tortor
-            posuere
-            luctus. Aenean tincidunt turpis sed dui aliquam vehicula. Praesent nec elit non dolor consectetur tinciddunt
-            sed
-            in
-            felis. Donec elementum, lacus at mattis tincidunt, eros magna faucibus sem, in condimentum est augue
-            tristique
-            risus.
-          </p>
-          <p>Ut id consectetur magna. Quisque volutpat augue enim, pulvinar lobortis nibh lacinia at. Vestivulum nec
-            erat
-            ut
-            mi
-            sollicitudin porttitor id sit amet risus. Nam tempus vel odio vitae aliquam.</p>
-          <p>In imperdiet eros id lacus vestibulum vestibulum. Suspendisse fermentum sem sagittis ante venenatis egestas
-            quis
-            vel
-            justo. Maecenas semper suscipit nunc, sed aliquam.</p>
-        </div>
-      </article> <!-- BLOG POST ENDS -->
-
-      <!-- COMMENT SECTION STARTS -->
-      <section class="comments">
-        <h4>comments:</h4>
-
-        <div class="comment-container">
-          <div class="user-photo">
-            <img src="assets/comment-1.jpg" alt="Headshot of Julia">
-          </div>
-
-          <div class="comment-content">
-            <p class="timestamp">Tuesday, October 9th, 2018 <span class="author">by Julia</span></p>
-            <p class="comment-text">Fusce behicula dolor arcu, sit amet blandit dolor mollis nec. Donec viverra eleifend
-              lacus, vitae ullamcorper metus. Sed sollictudin ipsum quis nunv sollicitudin ultrices. Donec euismod
-              sclerisque ligula. Maecenqs eu varius risus, eu aliquet arcu.</p>
-          </div>
-        </div>
-
-        <div class="comment-container">
-          <div class="user-photo">
-            <img src="assets/comment-2.jpg" alt="Headshot of Jeremy">
-          </div>
-
-          <div class="comment-content">
-            <p class="timestamp">Wednesday, October 10th 2018 <span class="author">by Jeremy</span></p>
-            <p class="comment-text">Fusce behicula dolor arcu, sit amet blandit dolor mollis nec. Donec viverra eleifend
-              lacus, vitae ullamcorper metus. Sed sollictudin ipsum quis nunv sollicitudin ultrices. Donec euismod
-              sclerisque ligula. Maecenqs eu varius risus, eu aliquet arcu.</p>
-          </div>
-        </div>
-      </section> <!-- COMMENT SECTION ENDS -->
-
-      <!-- COMMENT FORM STARTS -->
-      <form class="comments-form">
-        <div class="input-container">
-          <label for="name" class="visuallyHidden">Name</label>
-          <input type="text" placeholder="Name" id="name" name="name">
-
-          <label for="email" class="visuallyHidden">Email address</label>
-          <input type="email" placeholder="Email" id="email" name="email">
-        </div>
-
-        <label for="comment" class="visuallyHidden">Comment</label>
-        <textarea id="comment" name="comment" placeholder="Comment"></textarea>
-
-        <button class="click-here">post comment</button>
-      </form> <!-- COMMENT FORM ENDS -->
-    </main>
-
-    <!-- ASIDE STARTS -->
-    <aside>
-      <div class="aside-container">
-        <div class="aside-image">
-          <img src="assets/side-blog-image.jpg" alt="many people looking at giant whale in aquarium">
-        </div>
-        <div class="aside-text-item about">
-          <div class="aside-about">
-            <h5>about under the sea</h5>
-            <p>Nam dapibus nisl vitae elit fnngilla rutrum. Aenean sollicitudin, erat a elementum. Find out more.</p>
-          </div>
-        </div>
-        <div class="aside-text-item posts">
-          <h5>recent posts</h5>
-          <ul class="recent-posts-list">
-            <li>Donec facilisis tortor ut</li>
-            <li>Augue lacinia at viverra</li>
-            <li>Semper sed sapien metus</li>
-            <li>Scelerisque nec pharetra</li>
+        <nav class="main-nav">
+          <ul class="nav-items">
+            <li class="nav-item"><a href="index.html">Home</a></li>
+            <li class="nav-item">
+              <a class="selected-page" href="blog.html">Blog</a>
+            </li>
+            <li class="nav-item"><a href="contact.html">Contact</a></li>
           </ul>
-        </div>
+        </nav>
       </div>
-    </aside> <!-- ASIDE ENDS -->
-  </div>
-</body>
+    </header>
 
-<footer class="blog">
-  <p>Copyright &copy; 2018 HackerYou</p>
-</footer>
+    <div class="blog page-content">
+      <main>
+        <!-- BLOG POSTS STARTS -->
+        <article>
+          <h2>Blog</h2>
+          <div class="blog-image">
+            <img
+              src="assets/blog-post-image.jpg"
+              alt="Aquarium tank containing clownfish and coral"
+            />
+          </div>
+          <div class="blog-content">
+            <h3>Discovering new species</h3>
+            <p class="timestamp">
+              Monday May 4th, 2019 <span class="author">by Dieula</span>
+            </p>
+            <p>
+              Curabitur lobortis id lorem id bibendum. Ut id consectetur magna.
+              Quisque volupat augue enim, pulvinar lobortis nibh lacinia at.
+              Vestibulum nec erat ut mi sollicitudin porttitor id sit amet
+              risus. Nam tempus vel odiocitae aliquam.
+            </p>
+            <p>
+              In imperdiet eros id lacus vestibulum vestibulum. Suspendisse
+              fermentum sem sagittis ante venenatis egestas quis veljusto.
+              Maecenas semper suspicit nunc, sed aliquam sapien convallis eu.
+              Nulla ut turpis in diam dapibus consequat. Fusce vehicula dolor
+              arcu, sit amet blandit dolor mollis nec. Donec vicerra eleifend
+              lacu.
+            </p>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut
+              pretium pretium tempor. Ut eget imperdiet neque. In volupat ante
+              semper diam molestie, et aliquamerat laoreet. Sed sit amet arcu
+              aliquet, molestie justo at, auctor nunc. Phasellus ligula ipsum,
+              volupat eget semper id, viverra eget nibh. Suspendisse luctus
+              mattis cursus. Nam consectetur ante at nisl hendrerit gravida.
+              Donec behicula rhoncus mattis. Mauris dignissim semper mattis.
+              Fusce porttitor a mi at suspicit. Praesent facilisis dolor sapien,
+              vel sodales augue mollis ut. Mauris venenatis magna eu tortor
+              posuere luctus. Aenean tincidunt turpis sed dui aliquam vehicula.
+              Praesent nec elit non dolor consectetur tinciddunt sed in felis.
+              Donec elementum, lacus at mattis tincidunt, eros magna faucibus
+              sem, in condimentum est augue tristique risus.
+            </p>
+            <p>
+              Ut id consectetur magna. Quisque volutpat augue enim, pulvinar
+              lobortis nibh lacinia at. Vestivulum nec erat ut mi sollicitudin
+              porttitor id sit amet risus. Nam tempus vel odio vitae aliquam.
+            </p>
+            <p>
+              In imperdiet eros id lacus vestibulum vestibulum. Suspendisse
+              fermentum sem sagittis ante venenatis egestas quis vel justo.
+              Maecenas semper suscipit nunc, sed aliquam.
+            </p>
+          </div>
+        </article>
+        <!-- BLOG POST ENDS -->
 
+        <!-- COMMENT SECTION STARTS -->
+        <section class="comments">
+          <h4>comments:</h4>
+
+          <div class="comment-container">
+            <div class="user-photo">
+              <img src="assets/comment-1.jpg" alt="Headshot of Julia" />
+            </div>
+
+            <div class="comment-content">
+              <p class="timestamp">
+                Tuesday, October 9th, 2018 <span class="author">by Julia</span>
+              </p>
+              <p class="comment-text">
+                Fusce behicula dolor arcu, sit amet blandit dolor mollis nec.
+                Donec viverra eleifend lacus, vitae ullamcorper metus. Sed
+                sollictudin ipsum quis nunv sollicitudin ultrices. Donec euismod
+                sclerisque ligula. Maecenqs eu varius risus, eu aliquet arcu.
+              </p>
+            </div>
+          </div>
+
+          <div class="comment-container">
+            <div class="user-photo">
+              <img src="assets/comment-2.jpg" alt="Headshot of Jeremy" />
+            </div>
+
+            <div class="comment-content">
+              <p class="timestamp">
+                Wednesday, October 10th 2018
+                <span class="author">by Jeremy</span>
+              </p>
+              <p class="comment-text">
+                Fusce behicula dolor arcu, sit amet blandit dolor mollis nec.
+                Donec viverra eleifend lacus, vitae ullamcorper metus. Sed
+                sollictudin ipsum quis nunv sollicitudin ultrices. Donec euismod
+                sclerisque ligula. Maecenqs eu varius risus, eu aliquet arcu.
+              </p>
+            </div>
+          </div>
+        </section>
+        <!-- COMMENT SECTION ENDS -->
+
+        <!-- COMMENT FORM STARTS -->
+        <form class="comments-form">
+          <div class="input-container">
+            <label for="name" class="visuallyHidden">Name</label>
+            <input type="text" placeholder="Name" id="name" name="name" />
+
+            <label for="email" class="visuallyHidden">Email address</label>
+            <input type="email" placeholder="Email" id="email" name="email" />
+          </div>
+
+          <label for="comment" class="visuallyHidden">Comment</label>
+          <textarea
+            id="comment"
+            name="comment"
+            placeholder="Comment"
+          ></textarea>
+
+          <button class="click-here">post comment</button>
+        </form>
+        <!-- COMMENT FORM ENDS -->
+      </main>
+
+      <!-- ASIDE STARTS -->
+      <aside>
+        <div class="aside-container">
+          <div class="aside-image">
+            <img
+              src="assets/side-blog-image.jpg"
+              alt="many people looking at giant whale in aquarium"
+            />
+          </div>
+          <div class="aside-text-item about">
+            <div class="aside-about">
+              <h5>about under the sea</h5>
+              <p>
+                Nam dapibus nisl vitae elit fnngilla rutrum. Aenean
+                sollicitudin, erat a elementum. Find out more.
+              </p>
+            </div>
+          </div>
+          <div class="aside-text-item posts">
+            <h5>recent posts</h5>
+            <ul class="recent-posts-list">
+              <li>Donec facilisis tortor ut</li>
+              <li>Augue lacinia at viverra</li>
+              <li>Semper sed sapien metus</li>
+              <li>Scelerisque nec pharetra</li>
+            </ul>
+          </div>
+        </div>
+      </aside>
+      <!-- ASIDE ENDS -->
+    </div>
+  </body>
+
+  <footer class="blog">
+    <p>Copyright &copy; 2018 HackerYou</p>
+  </footer>
 </html>

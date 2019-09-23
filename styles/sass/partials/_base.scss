@@ -124,7 +124,7 @@ footer {
 }
 
 // Hamburger Menu Icon
-  // credits to https://codepen.io/angeliquejw/pen/LvgNaB?editors=0100
+// credits to https://codepen.io/angeliquejw/pen/LvgNaB?editors=0100
 .nav-icon {
   border: none;
   color: transparent;
@@ -165,30 +165,30 @@ footer {
 }
 
 // Hamburger Functionality
-  .menu-toggle {
-    display: none;
-    visibility: hidden;
-  }
+.menu-toggle {
+  display: none;
+  visibility: hidden;
+}
 
-  .menu-toggle:checked ~ .main-nav {
-    left: 0;
-  }
+.menu-toggle:checked ~ .main-nav {
+  left: 0;
+}
 
-  .menu-toggle:checked ~ label .icon-line:first-child {
-    top: 0px;
-    transform: translateX(-8px) rotate(-45deg) translateY(12px);
-    width: 27px;
-  }
+.menu-toggle:checked ~ label .icon-line:first-child {
+  top: 0px;
+  transform: translateX(-8px) rotate(-45deg) translateY(12px);
+  width: 27px;
+}
 
-  .menu-toggle:checked ~ label .icon-line:nth-child(2) {
-    opacity: 0;
-  }
+.menu-toggle:checked ~ label .icon-line:nth-child(2) {
+  opacity: 0;
+}
 
-  .menu-toggle:checked ~ label .icon-line:nth-child(3) {
-    top: 14px;
-    transform: translateX(-5px) rotate(45deg) translateY(-8px);
-    width: 27px;
-  }
+.menu-toggle:checked ~ label .icon-line:nth-child(3) {
+  top: 14px;
+  transform: translateX(-5px) rotate(45deg) translateY(-8px);
+  width: 27px;
+}
 
 // MEDIA QUERIES START HERE
 
@@ -218,7 +218,7 @@ footer {
 @media (max-width: 768px) {
   .wrapper-centered {
     width: 85%;
-  } 
+  }
 }
 
 @media (min-width: 481px) {
@@ -265,6 +265,4 @@ footer {
   .nav-item:not(:last-child) {
     margin-right: 0;
   }
-
 }
-

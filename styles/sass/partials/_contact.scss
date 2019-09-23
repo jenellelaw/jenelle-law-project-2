@@ -1,5 +1,6 @@
 .contact.secondary-header {
-  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.5)), url('../../../assets/contact-header.jpg');
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.5)),
+    url("../assets/contact-header.jpg");
   background-size: cover;
   background-repeat: none;
   background-position: center top;
@@ -22,7 +23,7 @@ main.contact {
   }
 }
 
-.contact-info {  
+.contact-info {
   min-width: 300px;
   margin-right: 5rem;
 
@@ -30,7 +31,7 @@ main.contact {
     color: white;
     text-decoration: none;
   }
-  
+
   & > a {
     display: inline-block;
     text-transform: uppercase;
@@ -59,11 +60,11 @@ main.contact {
 .form-container {
   position: relative;
   z-index: 1;
-  border-left: 45px solid rgba(0,0,0,0);
-  border-bottom: 45px solid rgba(0,0,0,0);
+  border-left: 45px solid rgba(0, 0, 0, 0);
+  border-bottom: 45px solid rgba(0, 0, 0, 0);
 
   &::after {
-    content: '';
+    content: "";
     display: block;
     width: 100%;
     height: 100%;
@@ -88,7 +89,7 @@ main.contact {
     width: 100%;
   }
 
-  input, 
+  input,
   textarea {
     background: none;
     color: $white;
@@ -98,7 +99,7 @@ main.contact {
       border-color: $white;
     }
   }
-  
+
   input {
     border-bottom: 2px $blue solid;
     flex: 1 50%;
@@ -113,7 +114,7 @@ main.contact {
     border: 2px $blue solid;
     width: 100%;
     height: 30rem;
-    margin-bottom: 4rem; 
+    margin-bottom: 4rem;
     resize: none;
   }
 
@@ -206,7 +207,6 @@ main.contact {
 }
 
 @media (max-width: 600px) {
-
   main.contact {
     padding-bottom: 55px;
   }
@@ -217,7 +217,7 @@ main.contact {
       display: none;
     }
   }
-  
+
   .contact-form {
     padding: 2.5rem 2rem;
   }

@@ -540,8 +540,8 @@ footer {
 }
 
 .index-header {
-  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.5))), url("../../../assets/header-image.jpg");
-  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.5)), url("../../../assets/header-image.jpg");
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.5))), url("../assets/header-image.jpg");
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.5)), url("../assets/header-image.jpg");
   background-size: cover;
   background-repeat: none;
   background-position: center 80%;
@@ -683,7 +683,7 @@ h1 {
 
 .new-additions.half-image::after,
 .nemo.half-image::after {
-  content: '';
+  content: "";
   display: block;
   width: 100%;
   height: 100%;
@@ -791,7 +791,7 @@ h1 {
 }
 
 .icon-point:first-of-type i {
-  font-size: 2.70rem;
+  font-size: 2.7rem;
   margin-top: 3px;
   margin-left: -5px;
 }
@@ -803,7 +803,7 @@ h1 {
 .home-4 {
   height: 40vw;
   max-height: 700px;
-  background: url("../../../assets/banner.jpg");
+  background: url("../assets/banner.jpg");
   background-position: center top;
   background-size: cover;
   background-repeat: no-repeat;
@@ -840,7 +840,7 @@ h1 {
 }
 
 .home-5 .square-image::after {
-  content: '';
+  content: "";
   display: block;
   width: 100%;
   height: 100%;
@@ -1184,8 +1184,8 @@ h1 {
 }
 
 .blog.secondary-header {
-  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.3))), url("../../../assets/blog-header.jpg");
-  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.3)), url("../../../assets/blog-header.jpg");
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.3))), url("../assets/blog-header.jpg");
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.3)), url("../assets/blog-header.jpg");
   background-size: cover;
   background-repeat: none;
   height: 40vw;
@@ -1256,7 +1256,7 @@ h1 {
 }
 
 .blog-image::after {
-  content: '';
+  content: "";
   display: block;
   width: 100%;
   height: 100%;
@@ -1621,8 +1621,8 @@ h1 {
 }
 
 .contact.secondary-header {
-  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.5))), url("../../../assets/contact-header.jpg");
-  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.5)), url("../../../assets/contact-header.jpg");
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.5))), url("../assets/contact-header.jpg");
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.5)), url("../assets/contact-header.jpg");
   background-size: cover;
   background-repeat: none;
   background-position: center top;
@@ -1710,7 +1710,7 @@ main.contact .content {
 }
 
 .form-container::after {
-  content: '';
+  content: "";
   display: block;
   width: 100%;
   height: 100%;
