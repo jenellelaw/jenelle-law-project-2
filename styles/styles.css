@@ -212,6 +212,8 @@ a {
 
 body {
   background: #0c1423;
+  overflow-x: hidden;
+  width: 100vw;
 }
 
 img {
